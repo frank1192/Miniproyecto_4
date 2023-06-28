@@ -27,4 +27,8 @@ public class Modelo_Arl {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    @Override
+    public String toString() {
+        return "Codigo: " + codigo + ", Nombre: " + nombre ; 
+    }
 }

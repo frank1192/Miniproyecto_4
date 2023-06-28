@@ -36,4 +36,8 @@ public class Modelo_Devengo {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    @Override
+    public String toString() {
+        return "Codigo: " + codigo + ", Nombre: " + nombre +"hacen base ? "+hacen_base; 
+    }
 }

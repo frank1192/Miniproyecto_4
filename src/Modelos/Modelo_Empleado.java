@@ -72,5 +72,8 @@ public class Modelo_Empleado {
     public void setFondo_pension(String Fondo_pension) {
         this.Fondo_pension = Fondo_pension;
     }
-
+    @Override
+    public String toString() {
+        return "Identificacion: " + identificacion + ", codigo del empleado: " + codigo_empleado + ", nombres: " + nombres + ", apellidos: " + apellidos + ", direccion : " + direccion + ", EPS: " + EPS+", Fondo_pension:"+Fondo_pension; 
+    }
 }

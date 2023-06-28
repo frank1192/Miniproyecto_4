@@ -27,4 +27,9 @@ public class Modelo_Eps {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    @Override
+    public String toString() {
+        return "Codigo: " + codigo + ", Nombre: " + nombre ; 
+    }
 }

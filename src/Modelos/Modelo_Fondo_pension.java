@@ -27,5 +27,10 @@ public class Modelo_Fondo_pension {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    @Override
+    public String toString() {
+        return "Codigo: " + codigo + ", Nombre: " + nombre ; 
+    }
 
 }

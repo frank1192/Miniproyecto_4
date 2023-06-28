@@ -15,7 +15,7 @@ public class Modelo_Empresa {
     private String Representante_legal;
     private String Correo_de_contacto;
     private String ARL;
-    private String caja_compemsacion;
+    private String caja_compensacion;
     private String Auxilio_Transporte;
 
     public String getNit() {
@@ -66,12 +66,12 @@ public class Modelo_Empresa {
         this.ARL = ARL;
     }
 
-    public String getCaja_compemsacion() {
-        return caja_compemsacion;
+    public String getCaja_compensacion() {
+        return caja_compensacion;
     }
 
-    public void setCaja_compemsacion(String caja_compemsacion) {
-        this.caja_compemsacion = caja_compemsacion;
+    public void setCaja_compensacion(String caja_compemsacion) {
+        this.caja_compensacion = caja_compemsacion;
     }
 
     public String getAuxilio_Transporte() {
@@ -81,7 +81,9 @@ public class Modelo_Empresa {
     public void setAuxilio_Transporte(String Auxilio_Transporte) {
         this.Auxilio_Transporte = Auxilio_Transporte;
     }
-    
-    
+    @Override
+    public String toString() {
+        return "Nit: " + Nit + ", Nombre: " + Nombre + ", Telefono: " + Telefono + ", Representante_legal: " + Representante_legal + ", Correo_de_contacto : " + Correo_de_contacto + ", ARL: " + ARL+", caja_compensacion:"+caja_compensacion+", Auxilio_Transporte: "+Auxilio_Transporte; 
+    }
 
 }
