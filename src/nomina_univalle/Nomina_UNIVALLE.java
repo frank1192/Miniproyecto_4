@@ -4,6 +4,9 @@
  */
 package nomina_univalle;
 
+import Controladores.ControladorBienvenidos;
+import vista.VentanaBienvenidos;
+
 /**
  *
  * @author Franklin Aguirre
@@ -14,7 +17,11 @@ public class Nomina_UNIVALLE {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        VentanaBienvenidos ventanaBienvenidos = new VentanaBienvenidos();
+        ControladorBienvenidos controladorBienvenidos = new ControladorBienvenidos(ventanaBienvenidos);
+
+        controladorBienvenidos.iniciar();
+        ventanaBienvenidos.setVisible(true);
     }
     
 }
