@@ -24,10 +24,7 @@ import vista.VentanaFondoDePension;
 import vista.VentanaLiquidacion;
 import vista.VentanaMenu;
 
-/**
- *
- * @author Usuario
- */
+
 public class ControladorMenu {
     private VentanaMenu vistamenu;
     private VentanaLiquidacion vistaliquidacion;

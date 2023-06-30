@@ -4,10 +4,6 @@
  */
 package Modelos;
 
-/**
- *
- * @author Franklin Aguirre
- */
 public class Modelo_Devengo {
     private String codigo;
     private String nombre;
