@@ -8,16 +8,19 @@ import java.util.ArrayList;
  *
  * @author Franklin Aguirre
  */
-public class Bienvenidos_DAO {
+public class ImplementacionBienvenidos_DAO implements InterfaceBienvenidos_DAO{
     private  List<Modelo_InicioSesion> administradores;
-     
-    public Bienvenidos_DAO(){
+
+    public ImplementacionBienvenidos_DAO(){
         administradores = new ArrayList<>();
     }
 
-    public List<Modelo_InicioSesion> administrador() {
+    @Override
+    public List<Modelo_InicioSesion> administradores() {
         return administradores;
     }
+
+    @Override
     public Modelo_InicioSesion getAdministrador(String nombre) {
         for(Modelo_InicioSesion usuario: administradores){
             if(usuario.getUsuario().equals(nombre)){
