@@ -48,12 +48,12 @@ public class ControladorMenu {
     public ControladorMenu(VentanaMenu vistamenu){
         this.vistamenu=vistamenu;
         //Funcionalidad de los botones
-        this.vistamenu.btnArl.addActionListener((ActionListener) this);
-        this.vistamenu.btnEps.addActionListener((ActionListener) this);
+        this.vistamenu.btnARL.addActionListener((ActionListener) this);
+        this.vistamenu.btnEPS.addActionListener((ActionListener) this);
         this.vistamenu.btnEmpleado.addActionListener((ActionListener) this);
-        this.vistamenu.btnLiquidacion.addActionListener((ActionListener) this);
-        this.vistamenu.btnCompensacion.addActionListener((ActionListener) this);
-        this.vistamenu.btnPension.addActionListener((ActionListener) this);
+        this.vistamenu.btnPreparar_Liquidacion.addActionListener((ActionListener) this);
+        this.vistamenu.btnCaja_De_Compensacion.addActionListener((ActionListener) this);
+        this.vistamenu.btnFondo_Pension.addActionListener((ActionListener) this);
         
         //Vista pension 
         this.vistapension = new VentanaFondoDePension ();
@@ -93,14 +93,14 @@ public class ControladorMenu {
     }
 
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == vistamenu.btnArl){
+        if(e.getSource() == vistamenu.btnARL){
             //ControladorUsuarios controladorUsuarios = new ControladorUsuarios(vistaUsuarios, modeloUsuarios, interfaceUsuariosDAO, vistaMenu);
             //controladorUsuarios.iniciar();
             vistaarl.setVisible(true);
             vistamenu.setVisible(false);
         }
 
-        if(e.getSource() == vistamenu.btnEps){
+        if(e.getSource() == vistamenu.btnEPS){
             vistamenu.setVisible(false);
             vistaeps.setVisible(true);
             //ControladorRecursos controladorRecursos = new ControladorRecursos(vistaRecursos, vistaMenu, modeloRecursos);
@@ -113,14 +113,14 @@ public class ControladorMenu {
             //ControladorPrestamos controladorPrestamos = new ControladorPrestamos(vistaPrestamos, vistaMenu, modeloPrestamos);
             //controladorPrestamos.iniciar();
         }
-        if(e.getSource() == vistamenu.btnLiquidacion){
+        if(e.getSource() == vistamenu.btnPreparar_Liquidacion){
             vistamenu.setVisible(false);
             vistaliquidacion.setVisible(true);}
-        if(e.getSource() == vistamenu.btnCompensacion){
+        if(e.getSource() == vistamenu.btnCaja_De_Compensacion){
             vistamenu.setVisible(false);
             vistacompensacion.setVisible(true);
         }
-        if(e.getSource() == vistamenu.btnPension){
+        if(e.getSource() == vistamenu.btnFondo_Pension){
             vistamenu.setVisible(false);
             vistapension.setVisible(true);
         }
