@@ -9,7 +9,7 @@ package Modelos;
  * @author Franklin Aguirre
  */
 public class Modelo_Empleado {
-    private String identificacion;
+    private int identificacion;
     private String codigo_empleado;
     private String apellidos;
     private String nombres;
@@ -17,11 +17,11 @@ public class Modelo_Empleado {
     private String EPS;
     private String Fondo_pension;
 
-    public String getIdentificacion() {
+    public int getIdentificacion() {
         return identificacion;
     }
 
-    public void setIdentificacion(String identificacion) {
+    public void setIdentificacion(int identificacion) {
         this.identificacion = identificacion;
     }
 

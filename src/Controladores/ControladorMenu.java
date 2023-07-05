@@ -60,8 +60,9 @@ public class ControladorMenu implements ActionListener{
 
             ventanaMenu.setVisible(false);
             VentanaAgregarEmpleado ventanaAgregarEmpleado = new VentanaAgregarEmpleado();
-            //ControladorEmpleado controladorEmpleado = new ControladorEmpleado();
+            ControladorEmpleado controladorEmpleado = new ControladorEmpleado(ventanaAgregarEmpleado);
             ventanaAgregarEmpleado.setVisible(true);
+            controladorEmpleado.iniciar();
 
         }
 
@@ -81,9 +82,9 @@ public class ControladorMenu implements ActionListener{
 
             ventanaMenu.setVisible(false);
             VentanaFondoDePension ventanaFondoDePension = new VentanaFondoDePension();
-            //ControladorFondoDePension controladorFondoDePension = new ControladorFondoDePension();
+            ControladorFondoDePension controladorFondoDePension = new ControladorFondoDePension(ventanaFondoDePension);
             ventanaFondoDePension.setVisible(true);
-            //controladorFondoDePension.iniciar();
+            controladorFondoDePension.iniciar();
         }
     }
 }

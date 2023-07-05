@@ -4,10 +4,18 @@
  */
 package DAO;
 
+import java.util.List;
+
+import Modelos.Modelo_Empleado;
+
 /**
  *
  * @author Miguel
  */
 public interface InterfaceEmpleado_DAO {
-    
+    List<Modelo_Empleado> empleados();
+    Modelo_Empleado getEmpleados(int identificacion);
+    void save(Modelo_Empleado empleado);
+    void delete(Modelo_Empleado empleado);
+    void update(Modelo_Empleado empleado);
 }
