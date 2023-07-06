@@ -14,6 +14,8 @@ public class ControladorEmpleado implements ActionListener{
 
     public ControladorEmpleado(VentanaAgregarEmpleado ventanaAgregarEmpleado){
         this.ventanaAgregarEmpleado = ventanaAgregarEmpleado;
+
+        this.ventanaAgregarEmpleado.btnAgregar.addActionListener(this);
     }
 
     public void iniciar(){
@@ -23,7 +25,8 @@ public class ControladorEmpleado implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+        if(e.getSource() == ventanaAgregarEmpleado.btnAgregar){
+            
+        }
     }
 }

@@ -14,8 +14,8 @@ import javax.swing.JOptionPane;
 
 import DAO.ImplementacionBienvenidos_DAO;
 import Modelos.Modelo_InicioSesion;
+import vista.VentanaAgregarEmpresa;
 import vista.VentanaBienvenidos;
-import vista.VentanaMenu;
 
 /**
  *
@@ -55,10 +55,10 @@ public class ControladorBienvenidos implements ActionListener{
             if(administrador != null && administrador.getContraseña().equals(contraseña)){
 
                 ventanaBienvenido.setVisible(false);
-                VentanaMenu ventanaMenu = new VentanaMenu();
-                ventanaMenu.setVisible(true);
-                ControladorMenu controladorMenu = new ControladorMenu(ventanaMenu);
-                controladorMenu.iniciar();
+                VentanaAgregarEmpresa ventanaAgregarEmpresa = new VentanaAgregarEmpresa();
+                ventanaAgregarEmpresa.setVisible(true);
+                ControladorEmpresa controladorEmpresa = new ControladorEmpresa(ventanaAgregarEmpresa);
+                controladorEmpresa.iniciar();
 
             }else{
 

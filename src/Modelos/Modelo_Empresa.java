@@ -9,7 +9,7 @@ package Modelos;
  * @author Franklin Aguirre
  */
 public class Modelo_Empresa {
-    private String Nit;
+    private int Nit;
     private String Nombre;
     private String Telefono;
     private String Representante_legal;
@@ -18,11 +18,11 @@ public class Modelo_Empresa {
     private String caja_compensacion;
     private String Auxilio_Transporte;
 
-    public String getNit() {
+    public int getNit() {
         return Nit;
     }
 
-    public void setNit(String Nit) {
+    public void setNit(int Nit) {
         this.Nit = Nit;
     }
 
