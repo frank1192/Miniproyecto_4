@@ -10,4 +10,9 @@ package DAO;
  */
 public class ImplementacionArl_DAO {
     
+    private String rutaArchivo;
+    public ImplementacionArl_DAO(String rutaArchivo) {
+        this.rutaArchivo = rutaArchivo;
+    }
+    
 }

@@ -4,6 +4,8 @@
  */
 package Modelos;
 
+import DAO.ImplementacionArl_DAO;
+
 /**
  *
  * @author Franklin Aguirre
@@ -11,6 +13,8 @@ package Modelos;
 public class Modelo_Arl {
     private String codigo;
     private String nombre;
+    
+    ImplementacionArl_DAO dao = new ImplementacionArl_DAO("src/datos.txt");
 
     public String getCodigo() {
         return codigo;
