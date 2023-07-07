@@ -2,6 +2,7 @@ package Controladores;
 
 import DAO.ImplementacionEmpresa_DAO;
 import DAO.InterfaceEmpresa_DAO;
+import Modelos.Modelo_Empleado;
 import Modelos.Modelo_Empresa;
 import vista.VentanaAgregarEmpresa;
 import vista.VentanaMenu;
@@ -62,6 +63,8 @@ public class ControladorEmpresa implements ActionListener{
                 empresa.setARL(arl);
                 empresa.setCaja_compensacion(cajaCompensacion);
 
+                interfaceEmpresa_DAO.save(empresa);
+
                 guardarEmpresa(empresa);
 
                 JOptionPane.showMessageDialog(ventanaAgregarEmpresa, "La empresa se agrego exitosamente", "Nueva Empresa", JOptionPane.INFORMATION_MESSAGE);
@@ -76,14 +79,20 @@ public class ControladorEmpresa implements ActionListener{
     }
 
     private void guardarEmpresa(Modelo_Empresa empresa) {
-    String rutaArchivo = "src/Archivos/empresa.txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/Archivos/empresas.txt", true))) {
 
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivo, true))) {
-        writer.write(empresa.toString());
-        writer.newLine();
-        writer.flush();
-    } catch (IOException e) {
-        e.printStackTrace();
+            writer.write(empresa.getNit() + "," +
+                    empresa.getNombre() + "," +
+                    empresa.getTelefono() + "," +
+                    empresa.getCaja_compensacion() + "," +
+                    empresa.getCorreo_de_contacto() + "," +
+                    empresa.getAuxilio_Transporte() + "," +
+                    empresa.getRepresentante_legal());
+            writer.newLine(); 
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(ventanaAgregarEmpresa, "Error al guardar los datos del empleado",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
-}
 }

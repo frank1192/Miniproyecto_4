@@ -1,7 +1,0 @@
-Nit: 213545, Nombre: asdasd, Telefono: asdasd, Representante_legal: asdasd, Correo_de_contacto : asdasdf, ARL: asdasfg, caja_compensacion:asfa, Auxilio_Transporte: null
-Nit: 213545, Nombre: asdasd, Telefono: asdasd, Representante_legal: asdasd, Correo_de_contacto : asdasdf, ARL: asdasfg, caja_compensacion:asfa, Auxilio_Transporte: null
-Nit: 213545, Nombre: asdasd, Telefono: asdasd, Representante_legal: asdasd, Correo_de_contacto : asdasdf, ARL: asdasfg, caja_compensacion:asfa, Auxilio_Transporte: null
-Nit: 213545, Nombre: asdasd, Telefono: asdasd, Representante_legal: asdasd, Correo_de_contacto : asdasdf, ARL: asdasfg, caja_compensacion:asfa, Auxilio_Transporte: null
-Nit: 213545, Nombre: asdasd, Telefono: asdasd, Representante_legal: asdasd, Correo_de_contacto : asdasdf, ARL: asdasfg, caja_compensacion:asfa, Auxilio_Transporte: null
-Nit: 213545, Nombre: asdasd, Telefono: asdasd, Representante_legal: asdasd, Correo_de_contacto : asdasdf, ARL: asdasfg, caja_compensacion:asfa, Auxilio_Transporte: null
-Nit: 213545, Nombre: asdasd, Telefono: asdasd, Representante_legal: asdasd, Correo_de_contacto : asdasdf, ARL: asdasfg, caja_compensacion:asfa, Auxilio_Transporte: null

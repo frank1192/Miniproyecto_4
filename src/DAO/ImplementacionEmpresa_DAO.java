@@ -7,6 +7,7 @@ package DAO;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import Modelos.Modelo_Empresa;
 
 /**
@@ -23,13 +24,19 @@ public class ImplementacionEmpresa_DAO implements InterfaceEmpresa_DAO{
 
     @Override
     public List<Modelo_Empresa> empresas() {
+        
         return empresas;
+        
     }
 
     @Override
     public Modelo_Empresa getEmpresa(int nit) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEmpresa'");
+        for (Modelo_Empresa empresa : empresas) {
+            if (empresa.getNit() == nit) {
+                return empresa;
+            }
+        }
+        return null;
     }
 
     @Override
