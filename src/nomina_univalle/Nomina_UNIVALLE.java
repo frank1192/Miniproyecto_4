@@ -4,7 +4,11 @@
  */
 package nomina_univalle;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 import Controladores.ControladorBienvenidos;
+import Mapeado.Mapeado;
 import vista.VentanaBienvenidos;
 
 /**
@@ -22,6 +26,17 @@ public class Nomina_UNIVALLE {
 
         controladorBienvenidos.iniciar();
         ventanaBienvenidos.setVisible(true);
+
+        try {
+            final ArrayList<String> datosArchivo = Mapeado.readFile("../Archivos/datos.txt");
+            final String datosCSV = Mapeado.transformar(datosArchivo);
+            final String rutaArchivoSalida = "src/Archivos/Mapeado.txt";
+
+            Mapeado.transformarYGuardar(datosArchivo, rutaArchivoSalida);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
 }

@@ -2,6 +2,7 @@ package Mapeado;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +26,11 @@ public class Mapeado {
 
     public static ArrayList<String> readFile(final String ruta) throws IOException{
         final InputStream in = Mapeado.class.getResourceAsStream(ruta);
+
+        if (in == null) {
+        throw new FileNotFoundException("No se pudo encontrar el archivo: " + ruta);
+        }
+
         final Reader fr = new InputStreamReader(in, "utf-8");
         
         final BufferedReader reader = new BufferedReader(fr);
