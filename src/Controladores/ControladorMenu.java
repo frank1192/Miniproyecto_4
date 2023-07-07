@@ -12,7 +12,7 @@ import vista.VentanaAgregarEmpleado;
 import vista.VentanaCajadeCompensacion;
 import vista.VentanaEPS;
 import vista.VentanaFondoDePension;
-//import vista.VentanaLiquidacion;
+import vista.VentanaLiquidacion;
 import vista.VentanaMenu;
 
 
@@ -43,7 +43,8 @@ public class ControladorMenu implements ActionListener{
 
             ventanaMenu.setVisible(false);
             VentanaARL ventanaARL = new VentanaARL();
-            //ControladorARL controladorARL = new ControladorARL();
+            ControladorARL controladorARL = new ControladorARL(ventanaARL);
+            controladorARL.iniciar();
             ventanaARL.setVisible(true);
             
         }
@@ -52,7 +53,8 @@ public class ControladorMenu implements ActionListener{
 
             ventanaMenu.setVisible(false);
             VentanaEPS ventanaEPS = new VentanaEPS();
-            //ControladorEPS controladorEPS = new ControladorEPS();
+            ControladorEPS controladorEPS = new ControladorEPS(ventanaEPS);
+            controladorEPS.iniciar();
             ventanaEPS.setVisible(true);
         }
 
@@ -66,16 +68,20 @@ public class ControladorMenu implements ActionListener{
 
         }
 
-        /*if(e.getSource() == ventanaMenu.btnPreparar_Liquidacion){
+        if(e.getSource() == ventanaMenu.btnPreparar_Liquidacion){
             ventanaMenu.setVisible(false);
-            vistaliquidacion.setVisible(true);
-        }*/
+            VentanaLiquidacion ventanaLiquidacion = new VentanaLiquidacion();
+            ControladorLiquidacion controladorLiquidacion = new ControladorLiquidacion(ventanaLiquidacion);
+            controladorLiquidacion.iniciar();
+            ventanaLiquidacion.setVisible(true);
+        }
 
         if(e.getSource() == ventanaMenu.btnCaja_De_Compensacion){
 
             ventanaMenu.setVisible(false);
             VentanaCajadeCompensacion ventanaCajadeCompensacion = new VentanaCajadeCompensacion();
-            //ControladorCajaDeCompensacion controladorCajaDeCompensacion = new ControladorCajaDeCompensacion();
+            ControladorCajaDeCompensacion controladorCajaDeCompensacion = new ControladorCajaDeCompensacion(ventanaCajadeCompensacion);
+            controladorCajaDeCompensacion.iniciar();
             ventanaCajadeCompensacion.setVisible(true);
         }
         if(e.getSource() == ventanaMenu.btnFondo_Pension){
